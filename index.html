@@ -8,42 +8,46 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Budget Calculator</h1>
-            <p>Use this calculator to create a practical budget!</p>
-        </header>
+        <h1>Budget Calculator</h1>
         
-        <main>
-            <form id="budgetForm">
-                <div class="input-group">
-                    <label for="income">Monthly Income</label>
-                    <input type="number" id="income" placeholder="Enter your monthly income" required>
-                </div>
-                <div class="input-group">
-                    <label for="expenses">Monthly Expenses</label>
-                    <input type="number" id="expenses" placeholder="Enter your monthly expenses" required>
-                </div>
-                <div class="input-group">
-                    <label for="savings">Savings (20%)</label>
-                    <input type="number" id="savings" readonly>
-                </div>
-                <div class="input-group">
-                    <label for="debtRepayment">Debt Repayment (30%)</label>
-                    <input type="number" id="debtRepayment" readonly>
-                </div>
-                <button type="submit">Calculate</button>
-            </form>
+        <!-- Income Section -->
+        <div class="section">
+            <label for="income">Enter Monthly Income:</label>
+            <input type="number" id="income" placeholder="Enter your income">
+        </div>
 
-            <div id="result" class="result">
-                <h2>Your Budget Breakdown</h2>
-                <p><strong>Savings (20%):</strong> ₹<span id="savingsResult"></span></p>
-                <p><strong>Debt Repayment (30%):</strong> ₹<span id="debtRepaymentResult"></span></p>
-                <p><strong>Remaining Expenses:</strong> ₹<span id="remainingExpenses"></span></p>
-            </div>
-        </main>
+        <!-- Expenses Section -->
+        <div class="section">
+            <label for="expenses">Enter Monthly Expenses (Groceries, Rent, etc.):</label>
+            <input type="number" id="expenses" placeholder="Enter your expenses">
+        </div>
+
+        <!-- Savings Section -->
+        <div class="section">
+            <label for="savings">Enter Monthly Savings Goal:</label>
+            <input type="number" id="savings" placeholder="Enter savings goal">
+        </div>
+
+        <!-- Debt Section -->
+        <div class="section">
+            <label for="debt">Enter Monthly Debt Repayment:</label>
+            <input type="number" id="debt" placeholder="Enter debt repayment">
+        </div>
+
+        <!-- Result Section -->
+        <div class="section">
+            <button id="calculate">Calculate</button>
+        </div>
+
+        <!-- Results Display -->
+        <div id="results">
+            <h2>Results</h2>
+            <div id="financialHealth"></div>
+            <div id="budgetBreakdown"></div>
+        </div>
+
+        <script src="script.js"></script>
     </div>
-    
-    <script src="script.js"></script>
 </body>
 </html>
 
