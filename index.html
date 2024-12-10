@@ -3,51 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Calculator</title>
+    <title>OverLeveraged Budget Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Budget Calculator</h1>
+        <h1>OverLeveraged Budget Calculator</h1>
+        <h2>Making debt less overwhelming</h2>
         
-        <!-- Income Section -->
-        <div class="section">
-            <label for="income">Enter Monthly Income:</label>
-            <input type="number" id="income" placeholder="Enter your income">
+        <div class="form-section">
+            <div class="input-group">
+                <label for="income">Monthly Income:</label>
+                <input type="number" id="income" placeholder="Enter your monthly income">
+            </div>
+            <div class="input-group">
+                <label for="expenses">Monthly Expenses:</label>
+                <input type="number" id="expenses" placeholder="Enter your monthly expenses">
+            </div>
+            <div class="input-group">
+                <label for="debt">Total Monthly Debt Payments:</label>
+                <input type="number" id="debt" placeholder="Enter your monthly debt repayment">
+            </div>
+            <div class="input-group">
+                <label for="savings">Savings Target:</label>
+                <input type="number" id="savings" placeholder="Enter your savings target">
+            </div>
+            <button onclick="calculate()">Calculate</button>
+        </div>
+        
+        <div class="results">
+            <h3>Results</h3>
+            <p><strong>Financial Health Score:</strong> <span id="score"></span></p>
+            <p><strong>Remaining Balance:</strong> <span id="remaining"></span></p>
+            
+            <canvas id="budgetChart"></canvas>
         </div>
 
-        <!-- Expenses Section -->
-        <div class="section">
-            <label for="expenses">Enter Monthly Expenses (Groceries, Rent, etc.):</label>
-            <input type="number" id="expenses" placeholder="Enter your expenses">
+        <div class="suggestions">
+            <h3>Suggestions</h3>
+            <ul id="suggestions"></ul>
         </div>
-
-        <!-- Savings Section -->
-        <div class="section">
-            <label for="savings">Enter Monthly Savings Goal:</label>
-            <input type="number" id="savings" placeholder="Enter savings goal">
-        </div>
-
-        <!-- Debt Section -->
-        <div class="section">
-            <label for="debt">Enter Monthly Debt Repayment:</label>
-            <input type="number" id="debt" placeholder="Enter debt repayment">
-        </div>
-
-        <!-- Result Section -->
-        <div class="section">
-            <button id="calculate">Calculate</button>
-        </div>
-
-        <!-- Results Display -->
-        <div id="results">
-            <h2>Results</h2>
-            <div id="financialHealth"></div>
-            <div id="budgetBreakdown"></div>
-        </div>
-
-        <script src="script.js"></script>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
