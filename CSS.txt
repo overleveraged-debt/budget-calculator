@@ -1,0 +1,28 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    max-width: 500px;
+}
+
+h1 {
+    color: #3b5998;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#results {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.2em;
+}

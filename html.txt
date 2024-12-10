@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Budget Calculator</h1>
+        <form id="budget-form">
+            <label for="income">Enter Your Monthly Income (₹):</label><br>
+            <input type="number" id="income" placeholder="Enter income" required><br><br>
+            <button type="submit">Calculate Budget</button>
+        </form>
+
+        <div id="results">
+            <h3>Budget Breakdown:</h3>
+            <p>50% for Needs: ₹<span id="needs">0</span></p>
+            <p>30% for Wants: ₹<span id="wants">0</span></p>
+            <p>20% for Savings/Debt: ₹<span id="savingsDebt">0</span></p>
+        </div>
+
+        <p><a href="https://www.example.com/download-template" target="_blank">Download Template</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
