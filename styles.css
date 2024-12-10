@@ -1,76 +1,144 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Layout */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #F7FAFC;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    max-width: 900px;
-    margin: 50px auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 h1 {
     color: #022E8E;
-    font-size: 2.5em;
-}
-
-h2 {
-    color: #38A169;
+    text-align: center;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
-.form-section {
-    margin-bottom: 30px;
-}
-
-.input-group {
-    margin: 10px 0;
-}
-
-label {
-    font-size: 1.1em;
-}
-
-input {
+/* Input Fields */
+input[type="number"], input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    font-size: 1em;
-    border: 1px solid #ccc;
+    margin: 10px 0;
+    border: 2px solid #38A169;
     border-radius: 5px;
+    font-size: 16px;
+    background-color: #F7FAFC;
 }
 
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #022E8E;
+    outline: none;
+}
+
+/* Button Styling */
 button {
-    background-color: #FFB020;
+    background-color: #38A169;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 1.1em;
+    border-radius: 5px;
+    width: 100%;
 }
 
 button:hover {
+    background-color: #022E8E;
+}
+
+/* Financial Health Score */
+#score {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.good {
+    background-color: #38A169;
+}
+
+.fair {
+    background-color: #FFB020;
+}
+
+.critical {
     background-color: #E53E3E;
 }
 
-.results {
-    margin: 30px 0;
+/* Pie Chart & Graph Styling */
+#budgetChart {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 20px 0;
 }
 
-canvas {
-    max-width: 100%;
-    height: 300px;
+/* Suggestions Section */
+#suggestions {
+    font-size: 16px;
+    margin-top: 20px;
+    background-color: #F7FAFC;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
-.suggestions ul {
-    list-style-type: none;
-    text-align: left;
+#suggestions li {
+    padding: 5px 0;
+}
+
+/* Progress Bar for Goals */
+.progress-bar-container {
+    width: 100%;
+    height: 25px;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #38A169;
+    width: 0%;  /* Dynamic width */
+    border-radius: 5px;
+}
+
+/* Error Messages */
+.error-message {
+    background-color: #E53E3E;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .input-group, .output-group {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
 }
